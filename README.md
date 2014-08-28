@@ -1,2 +1,11 @@
-dev-env-basis
-=============
+#### Install Applications: ####
+1. [f.lux](https://justgetflux.com/)
+2. [trailer](http://dev.housetrip.com/trailer/)
+3. [iTerm2](http://iterm2.com/)
+4. [MacVim](https://github.com/b4winckler/macvim/releases)
+5. [FileZilla](https://filezilla-project.org/)
+6. [X11](http://xquartz.macosforge.org/trac)
+7. [Wireshark](https://www.wireshark.org/download.html)(_depends on X11_)
+8. [Gimp](http://www.gimp.org/)
+9. [Inkscape](http://www.inkscape.org/en/)(_depends on X11_)
+10. [Sourcetree](http://www.sourcetreeapp.com/)
