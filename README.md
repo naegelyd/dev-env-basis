@@ -77,6 +77,15 @@
  * .bashrc
  * .vimrc
  * .gitconfig
+
+  or symlink them to push and pull updates as needed
+
+  ```
+  ln -s <path-to-this-repo>/.bashrc ~/.bashrc
+  ln -s <path-to-this-repo>/.vimrc ~/.vimrc
+  ln -s <path-to-this-repo>/.gitconfig ~/.gitconfig
+  ```
+
 2. Add colorschemes to iTerm2
  * Download colorschemes [here](http://iterm2colorschemes.com/)
  * Extract from downloaded archive
