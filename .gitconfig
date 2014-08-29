@@ -1,0 +1,7 @@
+[core]
+    # We use the -f flag to keep MacVim from backgrounding itself.
+    editor = "mvim -f"
+
+[user]
+    name = "Don Naegely"
+    email = "naegelyd@gmail.com"
