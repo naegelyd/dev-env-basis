@@ -46,11 +46,23 @@
   echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bash_profile
   ```
   
-16. [pathogen](https://github.com/tpope/vim-pathogen)
+16. [node](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
   ```
-  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  brew instal node
+  ```
+  
+#### Syntax Checking Tools: ####
+1. [flake8](https://flake8.readthedocs.org/)
+
+  ```
+  sudo pip install flake8
+  ```
+  
+2. [jshint](http://www.jshint.com/install/)
+
+  ```
+  npm install -g jshint
   ```
   
 #### Environment and Tools Customization: ####
@@ -68,7 +80,14 @@
  * Click `Load Presets... --> Import`
  * Choose colorschemes directory extracted above
  * Currently using `Solarized Dark` and/or `Solarized Dracula`
-3. Install [solarized colorscheme](http://ethanschoonover.com/solarized/vim-colors-solarized) for MacVim
+3. [pathogen](https://github.com/tpope/vim-pathogen)
+
+  ```
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  ```
+  
+4. Install [solarized colorscheme](http://ethanschoonover.com/solarized/vim-colors-solarized) for MacVim
 
   ```
   cd ~/.vim/bundle
@@ -79,7 +98,7 @@
   echo "colorscheme solarized" >> ~/.vimrc
   ```
   
-4. Install [ctrlp](http://kien.github.io/ctrlp.vim/#installation)
+5. Install [ctrlp](http://kien.github.io/ctrlp.vim/#installation)
 
   ```
   cd ~/.vim
@@ -88,11 +107,23 @@
   echo "set runtimepath^=~/.vim/bundle/ctrlp.vim" >> ~/.vimrc
   ```
   
-5. Install [NERDTree](https://github.com/scrooloose/nerdtree)
+6. Install [NERDTree](https://github.com/scrooloose/nerdtree)
 
   ```
   cd ~/.vim/bundle
   git clone https://github.com/scrooloose/nerdtree.git
   echo "\" Map ctrl-n to toggle NERDTree" >> ~/.vimrc
   echo "map <C-n> :NERDTreeToggle<CR>" >> ~/.vimrc
+  echo "\" Open NERTree automatically when vim starts if no files are open" >> ~/.vimrc
+  echo "autocmd StdinReadPre * let s:std_in=1" >> ~/.vimrc
+  echo "autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif" >> ~/.vimrc
+  echo "\" Close vim if NERDTree is only window left open" >> ~/.vimrc
+  echo "autocmd bufenter * if (winnr("$") == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary') | q | endif" >> ~/.vimrc
+  ```
+  
+7. Install [Syntastic](https://github.com/scrooloose/syntastic)
+
+  ```
+  cd ~/.vim/bundle && \
+  git clone https://github.com/scrooloose/syntastic.git
   ```
