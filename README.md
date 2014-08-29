@@ -49,7 +49,7 @@
 16. [node](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
   ```
-  brew instal node
+  brew install node
   ```
   
 #### Syntax Checking Tools: ####
