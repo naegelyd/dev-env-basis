@@ -17,25 +17,25 @@
 9. [Inkscape](http://www.inkscape.org/en/)(_depends on X11_)
 10. [Sourcetree](http://www.sourcetreeapp.com/)
 11. [Homebrew](http://brew.sh/)
-  
+
   ```
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   ```
-  
+
 12. [pip](http://pip.readthedocs.org/en/latest/installing.html)
-  
+
   ```
   brew install wget
   wget https://bootstrap.pypa.io/get-pip.py
   sudo python get-pip.py
   ```
-  
+
 13. [virtualenv](http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation)
 
   ```
   sudo pip install virtualenv
   ```
-  
+
 14. [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)
 
   ```
@@ -44,7 +44,7 @@
   echo "export PROJECT_HOME=$HOME/sites" >> $HOME/.bashrc
   echo "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.bashrc
   ```
-  
+
 15. [pyenv](https://github.com/yyuu/pyenv)
 
   ```
@@ -52,26 +52,26 @@
   brew install pyenv
   echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bash_profile
   ```
-  
+
 16. [node](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
   ```
   brew install node
   ```
-  
+
 #### Syntax Checking Tools: ####
 1. [flake8](https://flake8.readthedocs.org/)
 
   ```
   sudo pip install flake8
   ```
-  
+
 2. [jshint](http://www.jshint.com/install/)
 
   ```
   npm install -g jshint
   ```
-  
+
 #### Environment and Tools Customization: ####
 1. Copy the following files from the repo into your home directory
  * .bashrc
@@ -93,7 +93,7 @@
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
   ```
-  
+
 4. Install [solarized colorscheme](http://ethanschoonover.com/solarized/vim-colors-solarized) for MacVim
 
   ```
@@ -104,7 +104,7 @@
   echo "set background=dark" >> ~/.vimrc
   echo "colorscheme solarized" >> ~/.vimrc
   ```
-  
+
 5. Install [ctrlp](http://kien.github.io/ctrlp.vim/#installation)
 
   ```
@@ -113,7 +113,7 @@
   echo "\" Necessary to use ctrlp" >> ~/.vimrc
   echo "set runtimepath^=~/.vim/bundle/ctrlp.vim" >> ~/.vimrc
   ```
-  
+
 6. Install [NERDTree](https://github.com/scrooloose/nerdtree)
 
   ```
@@ -127,10 +127,17 @@
   echo "\" Close vim if NERDTree is only window left open" >> ~/.vimrc
   echo "autocmd bufenter * if (winnr("$") == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary') | q | endif" >> ~/.vimrc
   ```
-  
+
 7. Install [Syntastic](https://github.com/scrooloose/syntastic)
 
   ```
   cd ~/.vim/bundle && \
   git clone https://github.com/scrooloose/syntastic.git
+  ```
+
+8. Install [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
+
+  ```
+  cd ~/.vim/bundle && \
+  git clone git://github.com/ntpeters/vim-better-whitespace.git
   ```

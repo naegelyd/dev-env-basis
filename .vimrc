@@ -45,7 +45,7 @@ set noswapfile
 
 " Remove trailing whitespace before writing the file on all files except
 " git commit message files.
-autocmd! BufWritePre *\(.git/COMMIT_EDITMSG\)\@<! :|EraseBadWhitespace
+autocmd! BufWritePre *\(.git/COMMIT_EDITMSG\)\@<! :StripWhitespace
 
 " Hacky fix to prevent '#' from being set to first column. See Glenn's comment
 " on accepted answer:
