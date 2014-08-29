@@ -3,6 +3,13 @@
 2. [trailer](http://dev.housetrip.com/trailer/)
 3. [iTerm2](http://iterm2.com/)
 4. [MacVim](https://github.com/b4winckler/macvim/releases)
+
+  ```bash
+  # Might have to make the following changes for vim to support some plugins we install later.
+  sudo mkdir -p /usr/share/vim/syntax
+  sudo ln -s /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim /usr/share/vim/syntax/syntax.vim
+  ```
+
 5. [FileZilla](https://filezilla-project.org/)
 6. [X11](http://xquartz.macosforge.org/trac)
 7. [Wireshark](https://www.wireshark.org/download.html)(_depends on X11_)
