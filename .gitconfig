@@ -5,3 +5,16 @@
 [user]
     name = "Don Naegely"
     email = "naegelyd@gmail.com"
+
+[color]
+    ui = true
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    au = add -u .
+    df = diff
+    commit = commit -s
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
