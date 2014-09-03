@@ -16,6 +16,10 @@ set colorcolumn=80
 " Always show status line and command line
 set ls=2
 
+" Fix backspace quirk so delete/backspace key deletes character to left of
+" cursor.
+set backspace=2
+
 " Turn on syntax highlighting
 syntax on
 
@@ -57,6 +61,9 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Set font face and size
+set guifont=Monaco:h13
 
 " Status line stuff
 set statusline=
