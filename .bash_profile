@@ -1,3 +1,4 @@
+# -------------------------------- Begin Aliases ------------------------------
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -23,11 +24,8 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
-#-------------------------------------------------------------
-# The 'ls' family (this assumes you use a recent GNU ls).
-#-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
-alias l='ls'
+alias l='ls -alG'
 alias ls='ls -aG'
 alias lh='ls -lh'
 alias lx='ls -lXB'         #  Sort by extension.
@@ -42,3 +40,24 @@ alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+# -------------------------------- End Aliases --------------------------------
+
+# Set where virutal environments will live.
+export WORKON_HOME=$HOME/.virtualenvs
+# Ensure all new environments are isolated from the site-packages directory.
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+
+# Source virtualenvwrapper if it exists.
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
+
+# Move to the sites folder since all work usually starts there...
+if [[ -d ./sites/ ]]; then
+    cd sites
+fi
+
+# Add MetaMap to the path.
+export PATH=/Users/naegelyd/Documents/nlp/public_mm/bin:$PATH
