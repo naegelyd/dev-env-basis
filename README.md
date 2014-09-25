@@ -19,7 +19,7 @@
 11. [Homebrew](http://brew.sh/)
 
   ```
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
 12. [pip](http://pip.readthedocs.org/en/latest/installing.html)
