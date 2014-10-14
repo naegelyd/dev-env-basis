@@ -12,10 +12,10 @@ alias which='type -a'
 
 # Shortcuts for moving up directories
 alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
-alias .....='cd .....'
-alias ......='cd ......'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
 
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
