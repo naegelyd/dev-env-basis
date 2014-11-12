@@ -88,7 +88,10 @@ let g:syntastic_python_checkers=['flake8']
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Tell Ctrl-P to ignore .pyc files
-let g:ctrlp_custom_ignore = "pyc"
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'node_modules\|build\|dist\|local',
+    \ 'file': '\.pyc$'
+    \ }
 
 " Map ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
