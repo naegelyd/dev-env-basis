@@ -6,6 +6,7 @@ alias mv='mv -i'
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
 
+alias g='git'
 alias h='history'
 alias j='jobs -l'
 alias which='type -a'
