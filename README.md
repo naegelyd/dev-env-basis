@@ -5,6 +5,10 @@
 4. [MacVim](https://github.com/b4winckler/macvim/releases)
 
   ```bash
+  # Consider adding mvim to path
+  sudo mkdir -p /usr/local/bin/
+  sudo mv ~/Downloads/MacVim-snapshot-73/mvim /usr/local/bin/
+  
   # Might have to make the following changes for vim to support some plugins we install later.
   sudo mkdir -p /usr/share/vim/syntax
   sudo ln -s /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim /usr/share/vim/syntax/syntax.vim
