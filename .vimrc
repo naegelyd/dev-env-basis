@@ -3,6 +3,9 @@ execute pathogen#infect()
 " Enable line numbers
 se nu
 
+" Use space as the leader instead of '\'
+let mapleader=" "
+
 " Ignore case when searching unless I capitalize
 set ignorecase
 set smartcase
