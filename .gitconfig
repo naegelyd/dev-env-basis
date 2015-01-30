@@ -23,4 +23,5 @@
 
     # Bad spelling/typing aliases
     rb = branch
+    cob = "!f() { git checkout -b $1; }; f"
     cop = "!f() { git checkout $1; git pull; }; f"
