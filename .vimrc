@@ -103,3 +103,14 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close vim if NERDTree is only window left open
 autocmd bufenter * if (winnr() == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary') | q | endif
+
+" Speed up jedi-vim on big files. Originally reported in:
+"
+"   https://github.com/davidhalter/jedi/issues/34#issuecomment-9638459)
+"
+" show_function_definition deprecated, became show_call_signatures
+let g:jedi#show_call_signatures = 0
+" Prevent jedi-vim from popping up everytime a dot is typed
+let g:jedi#popup_on_dot = 0
+" No jedi-vim docstring window during auto-completion
+autocmd FileType python setlocal completeopt-=preview
