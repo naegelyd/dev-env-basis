@@ -35,12 +35,10 @@ alias lt='ls -ltr'         #  Sort by date, most recent last.
 alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
 alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
 
-# The ubiquitous 'll': directories first, with alphanumeric sorting:
-alias ll="ls -lv --group-directories-first"
-alias lm='ll |more'        #  Pipe through 'more'
-alias lr='ll -R'           #  Recursive ls.
-alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+
+# Suck at typing:
+alias sl='ls'
 # -------------------------------- End Aliases --------------------------------
 
 # Set where virutal environments will live.
@@ -55,10 +53,34 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
-# Move to the sites folder since all work usually starts there...
-if [[ -d ./sites/ ]]; then
-    cd sites
+# Configure auto-completion for git and the g as git alias.
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+__git_complete g __git_main
+
+COLOR_OFF='\e[0m'       # Text Reset
+
+# Regular Colors
+BLACK='\e[0;30m'        # Black
+RED='\e[0;31m'          # Red
+GREEN='\e[0;32m'        # Green
+YELLOW='\e[0;33m'       # Yellow
+BLUE='\e[0;34m'         # Blue
+PURPLE='\e[0;35m'       # Purple
+CYAN='\e[0;36m'         # Cyan
+WHITE='\e[0;37m'        # White
+
+# Configure prompt...show git branch and status in it
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=1
+    GIT_PS1_SHOWCOLORHINTS=1
+    PROMPT_COMMAND='__git_ps1 "${RED}\u@\h ${BLUE}\w${COLOR_OFF}" "\n$> "'
+else
+    PS1="${RED}\u@\h ${BLUE}\w${COLOR_OFF}\n$> "
 fi
 
-# Add MetaMap to the path.
-export PATH=/Users/naegelyd/Documents/nlp/public_mm/bin:$PATH
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
